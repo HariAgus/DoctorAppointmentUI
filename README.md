@@ -5,68 +5,68 @@
 [![Platform](https://img.shields.io/badge/Platform-Android-lightgrey.svg?logo=android)](https://www.android.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**DoctorAppointmentUI** adalah proyek aplikasi Android untuk pemesanan/janji temu dokter (*Doctor's Appointment*). Proyek ini berfokus pada implementasi antarmuka pengguna (UI/UX) modern menggunakan **Jetpack Compose** (Android modern toolkit untuk membuat native UI) melalui proses *slicing* dari desain Figma.
+**DoctorAppointmentUI** is an Android application project for booking doctor appointments. This project focuses on implementing a modern user interface (UI/UX) using **Jetpack Compose** (Android's modern toolkit for building native UI) through a Figma design slicing process.
 
-Proyek ini sangat cocok dijadikan sebagai referensi belajar untuk mengimplementasikan tata letak (*layouting*), komponen kustom, serta navigasi di Jetpack Compose.
+This project is highly suitable as a learning reference for implementing layouting, custom components, and navigation in Jetpack Compose.
 
 ---
 
 ## 📺 Video Tutorial & Slicing
-Proyek ini dibuat berdasarkan tutorial langkah demi langkah. Anda dapat melihat proses *slicing* Figma ke Android Jetpack Compose melalui tautan berikut:
-🎥 **[Tonton Video Tutorial di YouTube](https://youtu.be/iDRnepwPowU)**
+This project was built based on a step-by-step tutorial. You can watch the full process of slicing the Figma design into Android Jetpack Compose via the following link:
+🎥 **[Watch the Video Tutorial on YouTube](https://youtu.be/iDRnepwPowU)**
 
 ---
 
-## ✨ Fitur & Layar Utama
-Aplikasi ini mencakup beberapa komponen layar penting yang umumnya ada di aplikasi kesehatan:
-* **Splash / Welcome Screen:** Layar pembuka yang estetik dengan ilustrasi dan tombol ajakan bertindak (*call-to-action*).
-* **Home Screen:** Menampilkan daftar kategori dokter, kolom pencarian, jadwal janji temu terdekat, serta rekomendasi dokter terbaik.
-* **Doctor Detail Screen:** Informasi lengkap mengenai dokter, ulasan, spesialisasi, beserta tombol navigasi pemesanan.
-* **Custom Priority/Status Tag:** Implementasi komponen kecil kustom yang responsif (seperti tag keahlian atau ketersediaan).
+## ✨ Features & Main Screens
+The application includes several essential screen components commonly found in healthcare apps:
+* **Splash / Welcome Screen:** An aesthetic onboarding screen complete with illustrations and a call-to-action button.
+* **Home Screen:** Displays doctor categories, a search bar, upcoming appointment schedules, and top doctor recommendations.
+* **Doctor Detail Screen:** Comprehensive information about the doctor, including reviews, specialties, and a booking navigation button.
+* **Custom Priority/Status Tag:** Implementation of small, responsive custom components (such as expertise or availability tags).
 
 ---
 
-## 🛠️ Teknologi & Library yang Digunakan
-* **[Kotlin](https://kotlinlang.org/)** - Bahasa pemrograman utama yang digunakan.
-* **[Jetpack Compose](https://developer.android.com/jetpack/compose)** - Toolkit modern buatan Google untuk membangun UI Android secara deklaratif.
-* **Material Design 3 (M3)** - Komponen panduan desain UI terbaru dari Google untuk tampilan yang dinamis dan modern.
-* **Jetpack Navigation Compose** - Library untuk menangani perpindahan antar-layar (*screen routing*) dengan tipe data yang aman.
-* **Accompanist / Coil** - (Jika ada) Untuk pemuatan gambar secara asinkron dari URL atau aset.
+## 🛠️ Tech Stack & Libraries Used
+* **[Kotlin](https://kotlinlang.org/)** - The primary programming language used.
+* **[Jetpack Compose](https://developer.android.com/jetpack/compose)** - Google's modern toolkit for building native Android UI declaratively.
+* **Material Design 3 (M3)** - Google's latest UI design guidelines for a dynamic and modern look.
+* **Jetpack Navigation Compose** - Library for handling screen routing with type-safe arguments.
+* **Accompanist / Coil** - (If applicable) For asynchronous image loading from URLs or assets.
 
 ---
 
-## 🚀 Cara Menjalankan Proyek (Getting Started)
+## 🚀 Getting Started
 
-Untuk menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah di bawah ini:
+To run this project on your local machine, follow the steps below:
 
-### Prasyarat
-* **Android Studio** versi terbaru (disarankan Android Studio Flamingo atau yang lebih baru untuk dukungan penuh Compose).
-* **JDK 17** atau yang lebih tinggi.
-* Perangkat Android fisik atau Emulator dengan API Level 26 (Android 8.0) atau di atasnya.
+### Prerequisites
+* The latest version of **Android Studio** (Android Studio Flamingo or newer is recommended for full Compose support).
+* **JDK 17** or higher.
+* A physical Android device or Emulator running API Level 26 (Android 8.0) or higher.
 
-### Langkah Instalasi
-1.  **Clone Repositori Ini**
-    ```bash
+### Installation Steps
+1.  **Clone This Repository**
+```bash
     git clone [https://github.com/HariAgus/DoctorAppointmentUI.git](https://github.com/HariAgus/DoctorAppointmentUI.git)
     ```
-2.  **Buka di Android Studio**
-    * Buka Android Studio, pilih **Open**.
-    * Arahkan ke folder hasil klon proyek `DoctorAppointmentUI` dan klik **OK**.
-3.  **Sinkronisasi Gradle**
-    * Tunggu hingga Android Studio menyelesaikan proses *Gradle Sync* dan mengunduh semua dependensi yang diperlukan.
-4.  **Jalankan Aplikasi**
-    * Hubungkan perangkat Android Anda atau aktifkan emulator.
-    * Klik tombol **Run** (ikon segitiga hijau 🎯) di bilah alat atas Android Studio.
+2.  **Open in Android Studio**
+    * Open Android Studio and select **Open**.
+    * Navigate to the cloned `DoctorAppointmentUI` project folder and click **OK**.
+3.  **Sync Gradle**
+    * Wait for Android Studio to complete the *Gradle Sync* process and download all necessary dependencies.
+4.  **Run the Application**
+    * Connect your Android device or start your emulator.
+    * Click the **Run** button (green triangle icon 🎯) in the top toolbar of Android Studio.
 
 ---
 
-## 📁 Struktur Direktori Utama
+## 📁 Main Directory Structure
 ```text
 app/src/main/java/com/.../doctorappointmentui/
 │
-├── data/          # Kelas model data dummy / mock data
-├── ui/            # Komponen visual aplikasi
-│   ├── theme/     # Pengaturan Warna (Color), Tipografi (Type), dan Tema (Theme.kt)
-│   ├── components/# Komponen reusable (Button kustom, Card, SearchBar, dll)
-│   └── screen/    # Layar utama (HomeScreen, DetailScreen, SplashScreen)
-└── MainActivity.kt# Titik masuk utama aplikasi & Setup Navigasi
+├── data/          # Dummy data model classes / mock data
+├── ui/            # Visual components of the application
+│   ├── theme/     # Color, Typography, and Theme settings (Theme.kt)
+│   ├── components/# Reusable components (Custom Buttons, Cards, SearchBar, etc.)
+│   └── screen/    # Main screens (HomeScreen, DetailScreen, SplashScreen)
+└── MainActivity.kt# Main entry point of the app & Navigation setup
